@@ -10,7 +10,7 @@ npm install @jamshop/eleventy-plugin-array-filters
 
 ## Usage
 
-In you main config `.eleventy.js`: 
+In your main config `.eleventy.js`: 
 
 ```js
 const pluginArrayFilters = require("@jamshop/eleventy-plugin-array-filters");
