@@ -39,18 +39,12 @@ Filters include:
  - `isEmpty`
  - `isNotEmpty`
  - `flat`
- - `count`
  - `ampersandList`
  - `sentenceList`
- - `sort`
  - `ul`
  - `ol`
  - `dl`
  - `sum`
- - `unique`
- - `reverse`
- - `first`
- - `last`
 
 ### Examples
 
@@ -97,13 +91,6 @@ nested: [["banana"], ["mango","peach"]]
 {% endif %}
 ```
 
-#### `count`
-
-```
-<p>There are {{ fruits | count }} fruits in the array.</p>
-
-```
-
 Result: `<p>There are 7 fruits in the array.</p>`
 
 #### `flat`
@@ -131,29 +118,6 @@ Result: `banana, mango, peach, apple, apple, kiwi & strawberry`
 <p>{{ fruits | sentenceList }}</p>
 ```
 Result: `banana, mango, peach, apple, apple, kiwi and strawberry`
-
-#### `sort`
-
-```
-<p>{{ fruits | sort | sentenceList }}</p>
-```
-Result: `apple, apple, banana, kiwi, mango, peach and strawberry`
-
-#### `reverse`
-
-```
-<p>{{ fruits | sort | reverse | sentenceList }}</p>
-```
-Result: `strawberry, peach, mango, kiwi, banana, apple and apple`
-
-
-#### `unique`
-
-```
-<p>Unique fruits are: {{ fruits | unique | sentenceList }}</p>
-```
-Result: `Unique fruits are: banana, mango, peach, apple, kiwi and strawberry`
-
 #### `ul`
 
 ```
@@ -216,19 +180,3 @@ Result:
 <p>The sum of count is: {{ count | sum }}</p>
 ```
 Result: `The sum of count is: 15`
-
-#### `first`
-
-```
-<p>{{ fruits | first }}</p>
-```
-Result: `banana`
-
-#### `last`
-
-```
-<p>{{ fruits | last }}</p>
-```
-Result: `strawberry`
-
-
